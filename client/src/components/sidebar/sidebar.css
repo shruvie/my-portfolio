@@ -1,0 +1,28 @@
+.side{
+  position: fixed;
+  left: 20px;
+  top: 60%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  z-index: 999;
+  border-color:rgb(254, 243, 243,0.03);
+  backdrop-filter: blur(10px);
+  border: 1px;
+  border-radius:100px;
+  background-color: rgb(254, 243, 243,0.03);
+  padding: 20px 20px;
+}
+.side a {
+  color: white;
+  font-size: 1.3rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.side a:hover {
+  color: #c084fc;
+  transform: translateY(-3px);
+}

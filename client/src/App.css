@@ -16,7 +16,9 @@
     outline-offset: 2px;
   }
 }
-
+.formain{
+  gap: 20px;
+}
 .hero {
   position: relative;
 
