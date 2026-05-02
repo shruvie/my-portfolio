@@ -1,8 +1,17 @@
-import React from 'react';
+import React, {useState,useEffect} from 'react';
 import './Navbar.css';
 function Navbar() {
+    const [scrolled, setScrolled] = useState(false);
+    useEffect(() => {
+        const handlescroll=() => {
+            setScrolled(window.scrollY >30);
+        };
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    },[]);
+    
     return(
-        <nav className="navbar">
+        <nav className="navbar ${scrolled ? 'scrolled' : ''}`">
             <h4>Shruti's Portfolio</h4>
             <ul className="navbar-links">
                 <li> <a href="#Home">Home</a></li>
