@@ -3,13 +3,13 @@ import './Navbar.css';
 function Navbar() {
     const [scrolled, setScrolled] = useState(false);
     useEffect(() => {
-        const handlescroll=() => {
+        const handleScroll=() => {
             setScrolled(window.scrollY >30);
         };
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     },[]);
-    
+
     return(
         <nav className="navbar ${scrolled ? 'scrolled' : ''}`">
             <h4>Shruti's Portfolio</h4>
