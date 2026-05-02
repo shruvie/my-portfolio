@@ -6,11 +6,11 @@ function Navbar() {
             <h4>Shruti's Portfolio</h4>
             <ul className="navbar-links">
                 <li> <a href="#Home">Home</a></li>
-                <li><a href="#About">About</a></li>
-                <li><a href="#About">Projects</a></li>
-                <li><a href="#About">Skills</a></li>
-                <li><a href="#About">Education</a></li>
-                <li><a href="#About">Contact Us</a></li>
+                <li><a href="#Services">Services</a></li>
+                <li><a href="#Projects">Projects</a></li>
+                <li><a href="#Skills">Skills</a></li>
+                <li><a href="#Education">Education</a></li>
+                <li><a href="#Contact Uss">Contact Us</a></li>
             </ul>
             <button className="navbar-button">Resume</button>
         </nav>

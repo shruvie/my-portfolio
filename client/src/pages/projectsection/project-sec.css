@@ -1,0 +1,12 @@
+.project-sec{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 24px;
+    padding: 60px 40px;
+    margin-top: 0;        /* ← remove margin-top, use padding instead */
+    position: relative;
+    z-index: 0; 
+}

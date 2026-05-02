@@ -16,6 +16,9 @@
     outline-offset: 2px;
   }
 }
+.appin{
+  gap: 124px;
+}
 .formain{
   gap: 20px;
 }
