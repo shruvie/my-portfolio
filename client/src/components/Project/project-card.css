@@ -6,7 +6,7 @@
     border-radius: 22px;
     overflow: hidden;
     text-align: left;
-    margin: 22px 45px;
+    margin: 22px 6px;
     position: relative;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -102,19 +102,26 @@
 }
 
 /* Tech stack row */
-.stack-frame {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 7px;
-}
 
-.stack {
+.tag {
+    display: flex;
+    flex-direction: row;
+    gap:5px;
+    margin: 0px;
+    padding: 0px;
+    background-color: none;
+}
+.skill {
     background: rgba(255, 255, 255, 0.11);
     border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 30px;
-    padding: 1px 15px;
+    padding: 1px 12px;
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+    margin-right: 5px;
 }
 
 .stack p {

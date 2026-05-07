@@ -1,27 +1,26 @@
 import React from 'react';
 import './project-card.css';
 
+function ProjectCard({ project }) {
+  return (
+    <div className="project-card">
+        <div className='card-tag'>{project.tag}</div>
+      <img src={project.imageUrl} alt={project.title} className="project-image" />
+      <div className="maintxt">
 
-function ProjectCard({ title, description, imageUrl, stack,tag }){
-    return(
-        <div className ="project-card">
-            <img src={imageUrl} alt={title} className="project-image"/>
-            {tag && <span className="card-tag">{tag}</span>}
-            <div className="maintxt">
-                <h1>{title}</h1>
-                <p>{description}</p>
-                <div className="stack-frame">
-                     <div className="stack-frame">
-                    {stack?.map((item, i) => (
-                        <div className="stack" key={i}>
-                            <p>{item}</p>
-                        </div>
-                    ))}
-                    </div>
-                </div>
-            </div>
-        </div>
-    )
+        <h1>{project.title}</h1>
+        <p>{project.description}</p>
+          <div className='ttag'>
+            {Array.isArray(project.techStack) && project.techStack.map((skill, index) => (
+              <span key={index} className="skill">
+                {skill}
+              </span>
+            ))}
+          </div>
+        
+      </div>
+    </div>
+  );
 }
 
 export default ProjectCard;

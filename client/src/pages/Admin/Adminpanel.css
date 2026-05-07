@@ -1,0 +1,98 @@
+.admin-panel{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: stretch;
+    padding: 0px 20px;
+}
+.Adminnav{
+    justify-content: left;
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    width: 180px;
+    margin: 0px 40px 30px 0px;
+}
+.Adminnav button{
+    justify-content: left;
+    display: flex;
+    flex-direction: row;
+    width: 150px;
+    border-radius: 6px;
+    padding: 10px 16px;
+    text-align: left;
+    background-color: white;
+    color:dimgray;
+    border: none;
+    gap: 0;
+    font-size: 12px;
+
+}
+
+.Adminnav button:active{
+    justify-content: left;
+    display: flex;
+    flex-direction: row;
+    width: 150px;
+    border-radius: 6px;
+    padding: 10px 16px;
+    text-align: left;
+    background-color:#096B68;
+    color:white;
+    border: none;
+    gap: 0;
+    font-size: 12px;
+
+}
+.Adminnav button:focus{
+    justify-content: left;
+    display: flex;
+    flex-direction: row;
+    width: 150px;
+    border-radius: 6px;
+    padding: 10px 16px;
+    text-align: left;
+    background-color:#096B68;
+    color:white;
+    border: none;
+    gap: 0;
+    font-size: 12px;
+
+}
+.Adminnav button.active{
+    justify-content: left;
+    display: flex;
+    flex-direction: row;
+    width: 150px;
+    border-radius: 6px;
+    padding: 10px 16px;
+    text-align: left;
+    background-color:#096B68;
+    color:white;
+    border: none;
+    gap: 0;
+    font-size: 12px;
+
+}
+.folder{
+    margin: 0px 20px 0px 0px;
+    width: 15px;
+    height: 15px;
+    border-width: 0.5px;
+}
+.aw{
+    margin: 0px 20px 0px 0px;
+    width: 15px;
+    height: 15px;
+    border-width: 0.5px;
+}
+.hello{
+    text-align: left;
+}
+.hello h4{
+    font-size: 14px;
+}
+.hello h1{
+    font-size: 24px;
+    color:#096B68;
+}

@@ -7,6 +7,7 @@ const projectSchema = new mongoose.Schema(
     liveUrl : String,
     githubUrl : String,
     techStack : [String],
+    tag: String
 },{timestamps : true});
 
 const Project = mongoose.model("Project", projectSchema);

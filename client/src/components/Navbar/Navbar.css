@@ -13,15 +13,16 @@
     z-index: 100;
     gap: 10px;
     box-sizing: border-box;
+    transition: background 0.3s ease;
 }
 .navbar.scrolled {
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(214, 214, 214, 0.6);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    transition: 0.3s ease;
+    transition: background 0.3s ease;
 }
 
-.navbar-linka.scrolled{
+.navbar-links.scrolled a{
     color:white;
 } 
 
@@ -67,4 +68,45 @@
     color: black;
     background : #d9d9d9;
     border-radius: 60px;
+}
+
+.password-modal{
+    position:fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(3px);
+    display:flex;
+    z-index:99999;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.password-box{
+    text-align: left;
+    backdrop-filter: blur(3px);
+    background-color:rgba(174, 174, 174, 0.6);
+    padding: 40px 30px;
+    border-radius: 12px;
+}
+
+.password-box h2{
+    margin: 0px 60px 10px 0px;
+}
+.password-box input{
+    background : white;
+    color: black;
+    border: 5px;
+    padding: 4px 9px;
+    border-radius: 6px;
+}
+
+.password-box button{
+    background: black;
+    color:white;
+    font-size: 11px;
+    padding: 5px 10px;
+    border-color: black;
+    border-radius: 6px;
+    margin: 10px;
 }
