@@ -1,0 +1,21 @@
+.certcard{
+    width: 200px;
+}
+
+.certcard img{
+    height: 100px;
+    width: 200px;
+}
+.cerimg{
+    width: 100%;
+  height: 100px; /* Ek fixed height set karein */
+  object-fit: cover; /* Image ko stretch hone se bachayega */
+  border-radius: 8px;
+  background-color: #f0f0f0; /* Jab tak image load na ho, light grey background dikhega */
+  display: block;
+  margin-bottom: 11px;
+}
+.certcard p{
+    font-size: 11px;
+    color: black;
+}

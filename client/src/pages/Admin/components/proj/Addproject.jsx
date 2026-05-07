@@ -1,7 +1,7 @@
 import React ,{useState,useEffect} from 'react';
 import { FolderKanban, Award} from 'lucide-react';
 import './addpro.css'
-import ProjectCard from '../../..//components/Project/project-card.jsx';
+import ProjectCard from '../../../../components/Project/project-card.jsx';
 import AdminProjCard from './admin-proj-card.jsx';
 
 function AddProjects(){

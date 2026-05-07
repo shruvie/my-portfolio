@@ -1,9 +1,10 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Adminpanel.css';
-import Addcert from './components/Addcertificate.jsx';
-import AddProjects from './components/Addproject.jsx';
-import { FolderKanban, Award} from 'lucide-react';
+import Addcert from './components/certif/Addcertificate.jsx';
+import AddProjects from './components/proj/Addproject.jsx';
+import AddSkills from './components/skil/AddSkills.jsx'
+import { FolderKanban, Award, Star} from 'lucide-react';
 
 function AdminPanel(){
     const navigate = useNavigate();
@@ -21,6 +22,9 @@ function AdminPanel(){
                 <button className={`adminnavbut  ${activeTab ==='certificates' ? 'active': ''}`} onClick={() => setActiveTab('certificates')}>
                     <Award className="aw"/>Certificates
                 </button>
+                <button className={`adminnavbut ${activeTab ==='skills' ? 'active': ''}`} onClick={() => setActiveTab('skills')}>
+                    <Star className="folder" />Skills
+                    </button>
                 </div>
 
             </div>
@@ -30,6 +34,8 @@ function AdminPanel(){
                 {activeTab === 'projects' && <AddProjects />
                 }
                 {activeTab === 'certificates' && <Addcert />
+                }
+                {activeTab === 'skills' && <AddSkills />
                 }
             </div>
         </div>

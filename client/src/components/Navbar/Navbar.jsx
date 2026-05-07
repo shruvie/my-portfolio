@@ -2,7 +2,6 @@ import React, {useState,useEffect} from 'react';
 import './Navbar.css';
 import { useNavigate } from 'react-router-dom';
 function Navbar() {
-    const [scrolled, setScrolled] = useState(false);
     const [showpswrdbox, setShowPassword] = useState(false);
     const [Password, setPassword] = useState('');
     const [error, setError] = useState('');
@@ -25,17 +24,29 @@ function Navbar() {
         }
     }
 
-    useEffect(() => {
-        const handleScroll=() => {
-            setScrolled(window.scrollY >30);
-        };
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    },[]);
+  
+const [visible, setVisible] = useState(true);
+const [lastScroll, setLastScroll] = useState(0);
 
+useEffect(() => {
+    const handleScroll = () => {
+        const currentScroll = window.scrollY;
+
+        if (currentScroll < lastScroll) {
+            setVisible(true);  // scrolling UP → show
+        } else {
+            setVisible(false); // scrolling DOWN → hide
+        }
+
+        setLastScroll(currentScroll);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+}, [lastScroll]);
     return(
         <>
-        <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
+        <nav className={`navbar ${visible ? 'nav-visible' : 'nav-hidden'}`}>
             <h4 onDoubleClick={handleDoubleClick} style={{cursor:'pointer'}}>Shruti's Portfolio</h4>
             <ul className="navbar-links">
                 <li> <a href="#Home">Home</a></li>

@@ -6,6 +6,9 @@ import Sidebar from './components/sidebar/sidebar.jsx';
 import Service from './pages/services/service.jsx';
 import ProjectSection from './pages/projectsection/project-sec.jsx';
 import AdminPanel from './pages/Admin/Adminpanel.jsx';
+import Skillssec from './pages/Skills-sec/skills-sec.jsx';
+import CertifSec from './pages/Certificates-section/certif-sec.jsx';
+import Contactsec from './pages/Contacts/contact-sec.jsx';
 
 function App() {
   return (
@@ -20,6 +23,9 @@ function App() {
               <Home />
               <Service />
               <ProjectSection />
+              <Skillssec/>
+              <CertifSec />
+              <Contactsec />
             </>
           } />
           <Route path="/adminpanel" element={<AdminPanel />} />

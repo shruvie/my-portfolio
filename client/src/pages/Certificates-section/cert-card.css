@@ -1,0 +1,17 @@
+.Cert-Card{
+    height:400px;
+    width: 600px;
+}
+
+.Cert-Card img{
+    height: 300px;
+    width: 400px;
+    border-radius: 20px;
+    background-size: cover;
+
+}
+
+.Cert-Card h1{
+    font-size: 14px;
+    color: white;
+}
