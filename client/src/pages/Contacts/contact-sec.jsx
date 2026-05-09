@@ -3,15 +3,28 @@ import './contact-sec.css';
 
 function Contactsec(){
 
-    const [formData, setFormData] = useState({ name: '', email: '', message: '' });
-
+    const [formData, setFormData] = useState({ cont: '', mail: '', msg: '' });
+    const [sent, setsent] =useState(false);
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.id]: e.target.value });
     };
 
-    const handleSubmit = () => {
-        console.log(formData);
-        // add your submit logic here
+    const handleSubmit = async() => {
+        const res= await fetch("http://localhost:5000/contacts",{
+            method : 'POST',
+            headers: { 'Content-Type': 'application/json' }, 
+            body : JSON.stringify({
+                Contactno : formData.cont,
+                Email : formData.mail,
+                Message : formData.msg
+            })
+        })
+
+        const data = await res.json();
+        setsent(true);
+        setStatus('Message Sent Successfully');
+        setFormData({cont:'',mail:'',msg:''});
+
     };
 
 
@@ -37,17 +50,32 @@ function Contactsec(){
                 </div>
             </div>
         </div>
-        <div className='form-wrapper'>
+        <div className='form-wrapper' >
             <div className='corner tl'></div>
             <div className='corner tr'></div>
             <div className='corner bl'></div>
             <div className='corner br'></div>
-            <form>
-                <div className='inp-grp'>
-                    <label htmlFor="cont">Contact No.</label>
-                    <input type='tel' id="cont"></input>
+            <div className='mylove'>
+                <h6 className='title'>Contact form</h6>
+                <div className='formin'>
+                    <form>
+                        <div className='inp-grp'>
+    <input type='tel' id='cont' onChange={handleChange} value={formData.cont} placeholder=' ' />
+    <label htmlFor='cont'>Contact No.</label>
+</div>
+<div className='inp-grp'>
+    <input type='email' id='mail' value={formData.mail} onChange={handleChange} placeholder=' ' />
+    <label htmlFor='mail'>Email</label>
+</div>
+<div className='inp-grp'>
+    <input type='text' id='msg' value={formData.msg} onChange={handleChange} placeholder=' ' />
+    <label htmlFor='msg'>Message</label>
+</div>
+{sent ?(<button className='but'>Message Sent!</button>
+                    ):(<button className='but' type='button' onClick={handleSubmit}>Send Message</button>
+                    )}</form>
                 </div>
-            </form>
+            </div>
         </div>
     </div>)
 }

@@ -9,7 +9,7 @@ import AdminPanel from './pages/Admin/Adminpanel.jsx';
 import Skillssec from './pages/Skills-sec/skills-sec.jsx';
 import CertifSec from './pages/Certificates-section/certif-sec.jsx';
 import Contactsec from './pages/Contacts/contact-sec.jsx';
-
+import Footer from './components/footer/footer.jsx';
 function App() {
   return (
     <Router>
@@ -26,6 +26,7 @@ function App() {
               <Skillssec/>
               <CertifSec />
               <Contactsec />
+              <Footer />
             </>
           } />
           <Route path="/adminpanel" element={<AdminPanel />} />

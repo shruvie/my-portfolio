@@ -22,7 +22,7 @@
     gap: 40px;
 }
 .li{
-    background-color: white;
+    background-color: #31CBA3;
     height:200px;
     width:2px;
     gap: 40px;
@@ -50,14 +50,14 @@
     position: absolute;
     width: 60px;    /* 👈 must be small */
     height: 60px; 
-    border-color: #2ecc71;
+    border-color: #31CBA3;
     border-style: solid;
 }
 .form-wrapper {
     position: relative;
-    padding: 40px;
+    padding: 0px 40px 45px 40px;
     width: 350px;
-    height: 350px;
+    height: 300px;
 }
 .tl{
     border-width: 3px 0 0 3px;
@@ -68,28 +68,59 @@
 .bl { bottom: 0; left: 0;   border-width: 0 0 3px 3px; }
 .br { bottom: 0; right: 0;  border-width: 0 3px 3px 0; }
 
-#cont{
-    background: transparent;
+.inp-grp {
+    position: relative;
+    margin-bottom: 28px;
+}
+
+.inp-grp label {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    color: #aaa;
+    font-size: 13px;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.inp-grp input {
+    background: transparent;    /* 👈 removes the grey box */
     border: none;
+    border-bottom: 0.5px solid rgba(152, 152, 152, 0.6);
+    color: white;
+    padding: 10px 0 6px 0;
+    font-size: 15px;
+    outline: none;
+    width: 100%;
+    height: auto;
 }
-.inp-grp{
-    display: flex;
-    flex-direction: column;
+
+.inp-grp input:focus {
+    border-bottom: 1px solid #2ecc71;
 }
-.inp-grp label{
-    font-size: 16px;
-    margin-bottom:6px;
-}
+
 .inp-grp input:focus ~ label,
 .inp-grp input:not(:placeholder-shown) ~ label {
     top: -10px;
     font-size: 11px;
-    color: #2ecc71;
+    color: #31CBA3;
 }
-.inp-grp input {
+
+.formin{
+    background-color: #292929;
+    padding: 20px 30px;
+    margin-top: 0px;
+}
+.title{
+    margin-bottom: -0.5px;
+    font-size: 10px;
+    color: white;
+    text-align: center;
+}
+
+.but{
+    padding: 5px 55px;
+    color: black;
+    background-color: #31CBA3;
     border: none;
-    border-bottom: 1px ;
-    border-color: white;
-    height: 20px;
-    outline: none;
 }
