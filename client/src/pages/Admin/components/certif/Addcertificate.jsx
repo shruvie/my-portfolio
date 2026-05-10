@@ -7,7 +7,7 @@ function Addcert(){
     const [certs, SetCerts]=useState([]);
 
     useEffect(()=>{
-        fetch("http://localhost:5000/certificates")
+        fetch(`${import.meta.env.VITE_API_URL}/certificates`)
         .then(res=>res.json())
         .then(data=>SetCerts(data));
     },[]);

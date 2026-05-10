@@ -10,7 +10,7 @@ function Contactsec(){
     };
 
     const handleSubmit = async() => {
-        const res= await fetch("http://localhost:5000/contacts",{
+        const res= await fetch(`${import.meta.env.VITE_API_URL}/contacts`,{
             method : 'POST',
             headers: { 'Content-Type': 'application/json' }, 
             body : JSON.stringify({

@@ -6,7 +6,7 @@ function Skillssec(){
     const [skill, setSkills] =useState([]);
 
     useEffect(() =>{
-        fetch("http://localhost:5000/skills")
+        fetch(`${import.meta.env.VITE_API_URL}/skills`)
         .then(res=>res.json())
         .then(data=>setSkills(data))
     },[]);

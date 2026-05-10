@@ -4,7 +4,7 @@ import './project-sec.css';
 function ProjectSection(){
     const [projects,SetProjects]=useState([]);
         useEffect(() =>{
-            fetch("http://localhost:5000/projects")
+            fetch(`${import.meta.env.VITE_API_URL}/projects`)
             .then(res=>res.json())
             .then(data=>{
           console.log(data); // 🔍 check this

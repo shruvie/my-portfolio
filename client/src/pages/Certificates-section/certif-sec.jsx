@@ -10,7 +10,7 @@ function CertifSec(){
     const [paused, setPaused] = useState(false);
 
     useEffect(() => {
-        fetch("http://localhost:5000/certificates")
+        fetch(`${import.meta.env.VITE_API_URL}/certificates`)
         .then(res => res.json())
         .then(data => setCertificate(data));
     }, []);
