@@ -4,6 +4,7 @@ import { Star} from 'lucide-react';
 import './AddSkils.css';
 
 function AddSkills(){
+
     return (
         <div>
         <div className="Proj-sec">
