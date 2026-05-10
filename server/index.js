@@ -16,6 +16,11 @@ mongoose.connect(process.env.MONGO_URI)
     .catch((error) => console.error("Error connecting to MongoDB:", error));
 app.listen(process.env.PORT, () => console.log("Server running"));
 
+app.get('/', (req, res) => {
+  res.send('Server is live!');
+});
+
+
 app.use('/projects', projectRoutes);
 app.use('/skills', skillRoutes);
 app.use('/certificates', certificateRoutes);
