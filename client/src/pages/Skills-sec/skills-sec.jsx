@@ -17,7 +17,7 @@ function Skillssec(){
             <h1>My Skills</h1>
             <p>My skills so far</p>
         </div>
-        <div>
+        <div className='skillsss'>
            {skill.map((skill,index)=>(
                 <SkillCard className="cardi" key={index} skill={skill}/>
            ))}

@@ -7,13 +7,14 @@
 }
 .line{
     height:1px;
-    width: 900px;
+    width: 100%;
     background-color: black;
 }
 .liv{
     display: flex;
     flex-direction: row;
-    gap: 660px;
+    gap: auto;
+    justify-content: space-between;
 }
 .liv p{
     font-size: 12px;

@@ -12,7 +12,11 @@
     50%  { transform: translateY(-10px); }
     100% { transform: translateY(0px); }
 }
-
+.skillsss{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
 .skillimg{
     height: 80px;
     width: 80px;

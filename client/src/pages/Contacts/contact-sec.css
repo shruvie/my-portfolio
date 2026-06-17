@@ -7,9 +7,10 @@
     padding: 40px 80px;
     height: 400px;
     align-self: center;
-    width: 700px;
+    width:100%;
+    max-width: 900px;
     justify-content: center;
-    margin: 0px 60px;
+    margin: 0px 130px;
 }
 .main{
     display: flex;

@@ -16,3 +16,9 @@
 .cardi:hover{
     
 }
+
+.Skills-sec{
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+}
